@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mood Journal | Moss & Moon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">🌙 Moss & Moon</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Take the Quiz ✨</a>
+        <a href="journal.html">Mood Journal</a>
+    </nav>
+</header>
+
+<section class="page-heading">
+    <p class="eyebrow">A COLLECTION OF LITTLE MOMENTS</p>
+
+    <h1>Your Mood Garden 🌷</h1>
+
+    <p>
+        Leave yourself a little note.
+        Every feeling deserves a place to land.
+    </p>
+</section>
+
+<main class="journal-box">
+
+    <form id="journalForm">
+
+        <label>
+            Date
+            <input type="date" id="entryDate" required>
+        </label>
+
+        <label>
+            How are you feeling?
+
+            <select id="entryMood">
+                <option>Calm</option>
+                <option>Curious</option>
+                <option>Low-energy</option>
+                <option>Hopeful</option>
+                <option>A little of everything</option>
+            </select>
+        </label>
+
+        <label>
+            A little note to yourself
+
+            <textarea
+                id="entryNote"
+                placeholder="Write whatever is on your mind..."
+            ></textarea>
+        </label>
+
+        <button class="main-button" type="submit">
+            Plant This Memory ♡
+        </button>
+
+    </form>
+
+    <h2 style="margin-top: 35px; font-family: 'Playfair Display', serif;">
+        Your Little Moments
+    </h2>
+
+    <div id="journalEntries"></div>
+
+    <p class="small-note">
+        Your entries are saved in this browser on this device.
+    </p>
+
+</main>
+
+<footer>
+    <p>Made with moonlight & little moments 🌷</p>
+    <p>© 2026 Moss & Moon</p>
+</footer>
+
+<script src="journal.js"></script>
+
+</body>
+</html>

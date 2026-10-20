@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mood Quiz | Moss & Moon</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo">🌙 Moss & Moon</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="quiz.html">Take the Quiz ✨</a>
+        <a href="journal.html">Mood Journal</a>
+    </nav>
+</header>
+
+<section class="page-heading">
+    <p class="eyebrow">A LITTLE CHECK-IN WITH YOURSELF</p>
+
+    <h1>Read your inner weather ☁️</h1>
+
+    <p>
+        Answer five gentle questions and discover which mood
+        best matches your choices today.
+    </p>
+</section>
+
+<main class="quiz-box" id="quizBox">
+
+    <div class="progress-track">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <p class="question-number" id="questionNumber"></p>
+
+    <h2 id="questionText"></h2>
+
+    <div class="answers" id="answers"></div>
+
+    <div class="quiz-actions">
+        <button class="main-button soft-button" id="backButton" disabled>
+            ← Back
+        </button>
+
+        <button class="main-button" id="nextButton" disabled>
+            Next →
+        </button>
+    </div>
+
+</main>
+
+<p class="small-note">
+    Your result is a playful reflection, not a guaranteed prediction.
+</p>
+
+<footer>
+    <p>Made with moonlight & little moments 🌷</p>
+    <p>© 2026 Moss & Moon</p>
+</footer>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>

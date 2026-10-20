@@ -1,0 +1,587 @@
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #fff8ec;
+    --pink: #f0d3d2;
+    --sage: #dce2c9;
+    --green: #71815d;
+    --dark-green: #354b35;
+    --yellow: #f5e4b6;
+    --lilac: #e9d9e8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark-green);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    background: rgba(255, 248, 236, 0.95);
+    border-bottom: 1px solid #e8dfcd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-green);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #bd8d94;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 520px;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 5% 20%,
+            rgba(226, 180, 180, 0.65),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 20%,
+            rgba(178, 194, 147, 0.6),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(245, 220, 166, 0.5),
+            transparent 45%
+        );
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #858c6b;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease;
+}
+
+.hero h1 span {
+    color: #7c8b63;
+    font-style: italic;
+}
+
+.hero-text {
+    max-width: 520px;
+    margin: 0 auto 28px;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #68745d;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.main-button:hover {
+    background: var(--dark-green);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px #71815d30;
+}
+
+.tiny-note {
+    margin-top: 22px;
+    color: #8c8a72;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 13px;
+}
+
+/* FLOATING DECORATIONS */
+
+.floating {
+    position: absolute;
+    animation: float 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.flower {
+    font-size: 55px;
+    color: #b6b98b;
+    opacity: 0.65;
+}
+
+.flower-one {
+    top: 60px;
+    left: 10%;
+}
+
+.flower-two {
+    right: 12%;
+    bottom: 65px;
+    color: #d4a1a4;
+    animation-delay: 1s;
+}
+
+.flower-three {
+    top: 80px;
+    right: 20%;
+    color: #c5a457;
+    animation-delay: 2s;
+}
+
+/* MOOD SECTION */
+
+.mood-section {
+    text-align: center;
+    padding: 65px 7%;
+}
+
+.mood-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #85846f;
+    margin-bottom: 35px;
+}
+
+.mood-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.mood-card {
+    text-decoration: none;
+    color: var(--dark-green);
+    padding: 25px 15px;
+    min-height: 225px;
+    border-radius: 15px 8px 17px 10px;
+    transition: 0.3s;
+    border: 1px solid #ffffff90;
+}
+
+.mood-card:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: 0 12px 25px #4c57301a;
+}
+
+.calm {
+    background: var(--sage);
+}
+
+.curious {
+    background: var(--pink);
+}
+
+.tired {
+    background: var(--yellow);
+}
+
+.hopeful {
+    background: var(--lilac);
+}
+
+.mood-icon {
+    display: block;
+    font-size: 53px;
+    margin-bottom: 12px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.mood-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.mood-card p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.flourish {
+    margin-top: 30px;
+    color: #8b9a70;
+    letter-spacing: 4px;
+}
+
+.disclaimer {
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #85846f;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #e8dfcd;
+    padding: 25px 7%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    color: #85846f;
+    font-size: 12px;
+}
+
+/* QUIZ AND JOURNAL PAGES */
+
+.page-heading {
+    text-align: center;
+    padding: 60px 20px 35px;
+    background: radial-gradient(
+        circle at 50% 0%,
+        #f2e1cd,
+        transparent 70%
+    );
+}
+
+.page-heading h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 15px;
+}
+
+.page-heading p {
+    max-width: 580px;
+    margin: auto;
+    color: #727960;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.quiz-box,
+.journal-box {
+    max-width: 720px;
+    margin: 30px auto 65px;
+    padding: 30px;
+    background: #fffdf5;
+    border: 1px solid #e8dfcd;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #5d644010;
+}
+
+.progress-track {
+    height: 6px;
+    background: #eae5d5;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #89996e;
+    transition: width 0.3s;
+}
+
+.question-number {
+    color: #909575;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.quiz-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    margin: 12px 0 22px;
+}
+
+.answers {
+    display: grid;
+    gap: 12px;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: #fffaf0;
+    color: var(--dark-green);
+    border: 1px solid #e5deca;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.answer:hover {
+    border-color: #8b9b70;
+    transform: translateX(3px);
+}
+
+.answer.selected {
+    background: #e6e9d8;
+    border-color: #71815d;
+}
+
+.answer span {
+    font-size: 22px;
+}
+
+.quiz-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.soft-button {
+    background: #eee8d7;
+    color: var(--dark-green);
+}
+
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.quiz-result {
+    text-align: center;
+    animation: fadeUp 0.6s ease;
+}
+
+.result-icon {
+    font-size: 65px;
+}
+
+.quiz-result h2 {
+    font-size: 36px;
+}
+
+.result-description {
+    line-height: 1.9;
+    margin: 15px 0;
+    color: #68745d;
+}
+
+.result-tip {
+    background: #f1ecd9;
+    border-radius: 13px;
+    padding: 18px;
+    margin: 22px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+}
+
+.small-note {
+    text-align: center;
+    color: #85846f;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* JOURNAL */
+
+.journal-box form {
+    display: grid;
+    gap: 18px;
+}
+
+.journal-box label {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.journal-box input,
+.journal-box select,
+.journal-box textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #e2dbc8;
+    border-radius: 10px;
+    background: #fffaf0;
+    color: var(--dark-green);
+    font-family: inherit;
+}
+
+.journal-box textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.journal-entry {
+    padding: 18px;
+    margin-top: 14px;
+    border-left: 4px solid #b9c39b;
+    border-radius: 5px 12px 12px 5px;
+    background: #f3efdf;
+    animation: fadeUp 0.4s ease;
+}
+
+.journal-entry h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 5px;
+}
+
+.journal-entry small {
+    display: block;
+    margin-bottom: 8px;
+    color: #85846f;
+}
+
+.journal-entry p {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 760px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .mood-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .mood-card {
+        padding: 20px 10px;
+        min-height: 200px;
+    }
+
+    .hero {
+        min-height: 470px;
+        padding-top: 75px;
+    }
+
+    .flower {
+        font-size: 35px;
+    }
+
+    .quiz-box,
+    .journal-box {
+        margin: 20px 15px 45px;
+        padding: 22px;
+    }
+
+    footer {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .mood-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
